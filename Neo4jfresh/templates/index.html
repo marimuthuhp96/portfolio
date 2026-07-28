@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GraphRAG AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div class="logo">🤖 GraphRAG AI</div>
+
+    <a href="/clear">
+        <button class="newchat">+ New Chat</button>
+    </a>
+
+    <div class="menu">
+        <div class="menu-title">Quick Questions</div>
+        <div class="suggestion">Best restaurants</div>
+        <div class="suggestion">Top cafes</div>
+        <div class="suggestion">Best biryani</div>
+        <div class="suggestion">Worst restaurants</div>
+        <div class="suggestion">Romantic dinner place</div>
+    </div>
+
+    <div class="footer">
+        Neo4j + GraphRAG + Gemini
+    </div>
+</div>
+
+<!-- CHAT -->
+<div class="chat-container">
+
+<div class="header">
+🍽 Restaurant AI Assistant
+</div>
+
+<div class="chat-box" id="chat-box">
+
+{% if chat_history|length == 0 %}
+<div class="welcome">
+<h1>Welcome 👋</h1>
+<p>Your GraphRAG Restaurant AI</p>
+
+<div class="cards">
+<div class="card">Best restaurants</div>
+<div class="card">Top cafes</div>
+<div class="card">Best biryani</div>
+<div class="card">Family dinner</div>
+</div>
+</div>
+{% endif %}
+
+{% for sender,msg in chat_history %}
+    {% if sender=="user" %}
+    <div class="msg user">
+        <div class="avatar">🧑</div>
+        <div class="bubble user-bubble">{{msg}}</div>
+    </div>
+    {% else %}
+    <div class="msg bot">
+        <div class="avatar">🤖</div>
+        <div class="bubble bot-bubble">{{msg}}</div>
+    </div>
+    {% endif %}
+{% endfor %}
+
+</div>
+
+<div id="typing" class="typing">🤖 AI thinking...</div>
+
+<form method="POST" id="chat-form" class="input-area">
+<input type="text" name="user" id="user-input"
+placeholder="Ask about restaurants..."
+autocomplete="off" required>
+
+<button type="submit">➤</button>
+</form>
+
+</div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
