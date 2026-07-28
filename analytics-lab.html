@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Analytics Lab — Mari Muthu's space for Python notebooks, SQL practice, Power BI experiments, Excel dashboards, and ML experiments." />
+  <title>Analytics Lab | Mari Muthu — Data Analyst</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages/analytics-lab.css" />
+</head>
+<body>
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+  <div id="scroll-progress" role="progressbar"></div>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">MV.</a>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html"         class="nav-link">Home</a></li>
+        <li><a href="about.html"         class="nav-link">About</a></li>
+        <li><a href="skills.html"        class="nav-link">Skills</a></li>
+        <li><a href="projects.html"      class="nav-link">Projects</a></li>
+        <li><a href="experience.html"    class="nav-link">Experience</a></li>
+        <li><a href="analytics-lab.html" class="nav-link active">Analytics Lab</a></li>
+        <li><a href="contact.html"       class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta btn btn-primary btn-sm">Hire Me</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div style="padding:calc(var(--sp-32) + 40px) 0 var(--sp-12);">
+    <div class="container">
+      <div class="lab-hero" data-aos="zoom-in">
+        <div class="lab-hero-title">
+          <span class="grad-text">⚗️ Analytics</span> Lab
+        </div>
+        <p class="lab-hero-sub">
+          My experimental workspace — Python notebooks, SQL explorations, Power BI experiments,
+          Excel innovations, ML models, and data visualization gallery.
+        </p>
+        <div style="display:flex;justify-content:center;gap:var(--sp-3);flex-wrap:wrap;margin-top:var(--sp-6);">
+          <span class="badge badge-green">Python</span>
+          <span class="badge badge-blue">SQL</span>
+          <span class="badge badge-orange">Power BI</span>
+          <span class="badge badge-purple">Excel</span>
+          <span class="badge badge-pink">Machine Learning</span>
+          <span class="badge badge-cyan">Visualization</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAB CATEGORIES -->
+  <section class="section-md" aria-label="Analytics lab categories">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--sp-10);" data-aos="fade-up">
+        <div class="section-eyebrow"><i class="fa-solid fa-flask"></i> Lab Categories</div>
+        <h2 class="section-title">Exploration <span class="grad-text">Areas</span></h2>
+      </div>
+
+      <div class="lab-grid">
+        <!-- Python -->
+        <div class="lab-category-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="lab-category-header python">
+            <div class="lab-cat-icon">🐍</div>
+            <div class="lab-cat-title">Python Notebooks</div>
+            <div class="lab-cat-count">6+ Notebooks</div>
+          </div>
+          <div class="lab-category-body">
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-success);"></div>
+              <span class="lab-item-name">Exploratory Data Analysis (EDA)</span>
+              <span class="lab-item-badge badge badge-green">Core</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-success);"></div>
+              <span class="lab-item-name">Pandas Data Manipulation</span>
+              <span class="lab-item-badge badge badge-green">Core</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-success);"></div>
+              <span class="lab-item-name">Statistical Analysis & Hypothesis Testing</span>
+              <span class="lab-item-badge badge badge-blue">Stats</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-success);"></div>
+              <span class="lab-item-name">Seaborn & Matplotlib Visualization</span>
+              <span class="lab-item-badge badge badge-purple">Viz</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-success);"></div>
+              <span class="lab-item-name">Feature Engineering Techniques</span>
+              <span class="lab-item-badge badge badge-pink">ML</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SQL -->
+        <div class="lab-category-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="lab-category-header sql">
+            <div class="lab-cat-icon">🗃️</div>
+            <div class="lab-cat-title">SQL Practice</div>
+            <div class="lab-cat-count">8+ Query Sets</div>
+          </div>
+          <div class="lab-category-body">
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-success);"></div>
+              <span class="lab-item-name">Business Analytics Queries</span>
+              <span class="lab-item-badge badge badge-blue">Business</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-success);"></div>
+              <span class="lab-item-name">CTE & Recursive Queries</span>
+              <span class="lab-item-badge badge badge-green">Advanced</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-success);"></div>
+              <span class="lab-item-name">Window Functions Mastery</span>
+              <span class="lab-item-badge badge badge-green">Advanced</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-success);"></div>
+              <span class="lab-item-name">Cohort & Funnel Analysis</span>
+              <span class="lab-item-badge badge badge-orange">Analytics</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-success);"></div>
+              <span class="lab-item-name">Query Optimization Techniques</span>
+              <span class="lab-item-badge badge badge-purple">Perf</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Power BI -->
+        <div class="lab-category-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="lab-category-header powerbi">
+            <div class="lab-cat-icon">📊</div>
+            <div class="lab-cat-title">Power BI Experiments</div>
+            <div class="lab-cat-count">5+ Dashboards</div>
+          </div>
+          <div class="lab-category-body">
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-warning);"></div>
+              <span class="lab-item-name">DAX Time Intelligence</span>
+              <span class="lab-item-badge badge badge-orange">DAX</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-warning);"></div>
+              <span class="lab-item-name">Custom Visuals & Themes</span>
+              <span class="lab-item-badge badge badge-orange">Design</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-warning);"></div>
+              <span class="lab-item-name">Row-Level Security (RLS)</span>
+              <span class="lab-item-badge badge badge-purple">Security</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-warning);"></div>
+              <span class="lab-item-name">Drill-through & Bookmarks</span>
+              <span class="lab-item-badge badge badge-blue">UX</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-warning);"></div>
+              <span class="lab-item-name">What-If Parameters</span>
+              <span class="lab-item-badge badge badge-green">Analytics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Excel -->
+        <div class="lab-category-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="lab-category-header excel">
+            <div class="lab-cat-icon">📗</div>
+            <div class="lab-cat-title">Excel Dashboards</div>
+            <div class="lab-cat-count">3+ Projects</div>
+          </div>
+          <div class="lab-category-body">
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-purple);"></div>
+              <span class="lab-item-name">Power Query ETL Pipelines</span>
+              <span class="lab-item-badge badge badge-purple">ETL</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-purple);"></div>
+              <span class="lab-item-name">Dynamic Pivot Dashboards</span>
+              <span class="lab-item-badge badge badge-blue">BI</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-purple);"></div>
+              <span class="lab-item-name">Advanced DAX in Power Pivot</span>
+              <span class="lab-item-badge badge badge-purple">DAX</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-purple);"></div>
+              <span class="lab-item-name">Salary Benchmarking Model</span>
+              <span class="lab-item-badge badge badge-green">Model</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-purple);"></div>
+              <span class="lab-item-name">Interactive KPI Scorecards</span>
+              <span class="lab-item-badge badge badge-orange">KPI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ML -->
+        <div class="lab-category-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="lab-category-header ml">
+            <div class="lab-cat-icon">🤖</div>
+            <div class="lab-cat-title">ML Experiments</div>
+            <div class="lab-cat-count">4+ Models</div>
+          </div>
+          <div class="lab-category-body">
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-pink);"></div>
+              <span class="lab-item-name">K-Means Clustering</span>
+              <span class="lab-item-badge badge badge-pink">Cluster</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-pink);"></div>
+              <span class="lab-item-name">DBSCAN Anomaly Detection</span>
+              <span class="lab-item-badge badge badge-pink">Anomaly</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-pink);"></div>
+              <span class="lab-item-name">Logistic Regression Classifier</span>
+              <span class="lab-item-badge badge badge-blue">Classify</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-pink);"></div>
+              <span class="lab-item-name">GraphRAG NLP Pipeline</span>
+              <span class="lab-item-badge badge badge-purple">NLP</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:var(--accent-pink);"></div>
+              <span class="lab-item-name">Sentiment Analysis Models</span>
+              <span class="lab-item-badge badge badge-green">NLP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Viz Gallery -->
+        <div class="lab-category-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="lab-category-header viz">
+            <div class="lab-cat-icon">📈</div>
+            <div class="lab-cat-title">Visualization Gallery</div>
+            <div class="lab-cat-count">20+ Charts</div>
+          </div>
+          <div class="lab-category-body">
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:#06B6D4;"></div>
+              <span class="lab-item-name">Heatmaps & Correlation Matrices</span>
+              <span class="lab-item-badge badge badge-cyan">Stats</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:#06B6D4;"></div>
+              <span class="lab-item-name">Geographic Maps & Choropleth</span>
+              <span class="lab-item-badge badge badge-cyan">Geo</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:#06B6D4;"></div>
+              <span class="lab-item-name">Time Series & Trend Charts</span>
+              <span class="lab-item-badge badge badge-blue">Time</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:#06B6D4;"></div>
+              <span class="lab-item-name">Knowledge Graph Visualizations</span>
+              <span class="lab-item-badge badge badge-purple">Graph</span>
+            </div>
+            <div class="lab-item">
+              <div class="lab-item-dot" style="background:#06B6D4;"></div>
+              <span class="lab-item-name">Cluster Scatter Plots (3D)</span>
+              <span class="lab-item-badge badge badge-pink">ML</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CODE TERMINAL DEMO -->
+  <section class="section-md" style="background:var(--bg-secondary);border-top:1px solid var(--border-subtle);" aria-label="Code sample demonstration">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--sp-10);" data-aos="fade-up">
+        <div class="section-eyebrow"><i class="fa-solid fa-terminal"></i> Code Samples</div>
+        <h2 class="section-title">Python & SQL <span class="grad-text">In Action</span></h2>
+      </div>
+      <div class="grid-2" style="gap:var(--sp-6);">
+        <!-- Python -->
+        <div class="code-terminal" data-aos="fade-right">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <div class="terminal-dot red"></div>
+              <div class="terminal-dot yellow"></div>
+              <div class="terminal-dot green"></div>
+            </div>
+            <div class="terminal-title">groundwater_analysis.py</div>
+          </div>
+          <div class="terminal-body" role="code" aria-label="Python code sample for groundwater analysis">
+<span class="code-keyword">import</span> pandas <span class="code-keyword">as</span> pd
+<span class="code-keyword">from</span> sklearn.cluster <span class="code-keyword">import</span> KMeans
+<span class="code-keyword">from</span> sklearn.preprocessing <span class="code-keyword">import</span> StandardScaler
+
+<span class="code-comment"># Load groundwater dataset</span>
+df = pd.<span class="code-func">read_csv</span>(<span class="code-string">'groundwater_data.csv'</span>)
+
+<span class="code-comment"># Feature engineering</span>
+features = [<span class="code-string">'depth'</span>, <span class="code-string">'quality_score'</span>, <span class="code-string">'rainfall'</span>]
+X = StandardScaler().<span class="code-func">fit_transform</span>(df[features])
+
+<span class="code-comment"># K-Means clustering (k=3 optimal)</span>
+kmeans = <span class="code-func">KMeans</span>(n_clusters=<span class="code-num">3</span>, random_state=<span class="code-num">42</span>)
+df[<span class="code-string">'cluster'</span>] = kmeans.<span class="code-func">fit_predict</span>(X)
+
+<span class="code-comment"># Risk assessment</span>
+risk_map = {<span class="code-num">0</span>: <span class="code-string">'Critical'</span>, <span class="code-num">1</span>: <span class="code-string">'Moderate'</span>, <span class="code-num">2</span>: <span class="code-string">'Stable'</span>}
+df[<span class="code-string">'risk_level'</span>] = df[<span class="code-string">'cluster'</span>].<span class="code-func">map</span>(risk_map)
+
+<span class="code-keyword">print</span>(df[<span class="code-string">'risk_level'</span>].<span class="code-func">value_counts</span>())
+<span class="code-comment"># Critical: 47 | Moderate: 283 | Stable: 270</span>
+          </div>
+        </div>
+
+        <!-- SQL -->
+        <div class="code-terminal" data-aos="fade-left">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <div class="terminal-dot red"></div>
+              <div class="terminal-dot yellow"></div>
+              <div class="terminal-dot green"></div>
+            </div>
+            <div class="terminal-title">sales_cohort_analysis.sql</div>
+          </div>
+          <div class="terminal-body" role="code" aria-label="SQL code sample for cohort analysis">
+<span class="code-comment">-- Customer Cohort Retention Analysis</span>
+<span class="code-keyword">WITH</span> cohort <span class="code-keyword">AS</span> (
+  <span class="code-keyword">SELECT</span>
+    customer_id,
+    <span class="code-func">DATE_TRUNC</span>(<span class="code-string">'month'</span>, first_order) <span class="code-keyword">AS</span> cohort_month,
+    <span class="code-func">DATE_TRUNC</span>(<span class="code-string">'month'</span>, order_date) <span class="code-keyword">AS</span> order_month
+  <span class="code-keyword">FROM</span> orders o
+  <span class="code-keyword">JOIN</span> customers c <span class="code-keyword">USING</span> (customer_id)
+),
+retention <span class="code-keyword">AS</span> (
+  <span class="code-keyword">SELECT</span>
+    cohort_month,
+    <span class="code-func">DATEDIFF</span>(<span class="code-string">'month'</span>,cohort_month,order_month)
+        <span class="code-keyword">AS</span> period,
+    <span class="code-func">COUNT</span>(<span class="code-keyword">DISTINCT</span> customer_id) <span class="code-keyword">AS</span> customers
+  <span class="code-keyword">FROM</span> cohort
+  <span class="code-keyword">GROUP BY</span> <span class="code-num">1</span>, <span class="code-num">2</span>
+)
+<span class="code-keyword">SELECT</span> cohort_month,
+  <span class="code-func">ROUND</span>(customers * <span class="code-num">100.0</span>
+    / <span class="code-func">FIRST_VALUE</span>(customers) <span class="code-keyword">OVER</span>
+      (<span class="code-keyword">PARTITION BY</span> cohort_month <span class="code-keyword">ORDER BY</span> period), <span class="code-num">1</span>)
+  <span class="code-keyword">AS</span> retention_rate
+<span class="code-keyword">FROM</span> retention;
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-md" aria-label="Analytics lab CTA">
+    <div class="container" style="text-align:center;">
+      <div data-aos="zoom-in">
+        <h2 class="section-title" style="margin-bottom:var(--sp-4);">Want to See the Full <span class="grad-text">Codebase?</span></h2>
+        <p class="section-subtitle" style="margin:0 auto var(--sp-8);">All projects and experiments are available on GitHub. Feel free to explore, fork, and collaborate.</p>
+        <div style="display:flex;justify-content:center;gap:var(--sp-3);flex-wrap:wrap;">
+          <a href="https://github.com/marimuthuhp96" target="_blank" rel="noopener" class="btn btn-primary btn-lg"><i class="fa-brands fa-github"></i> Explore GitHub</a>
+          <a href="contact.html" class="btn btn-outline btn-lg"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">MV.</div>
+        <p class="footer-copy">© 2026 Mari Muthu · Built with passion for data.</p>
+        <div class="footer-links">
+          <a href="https://github.com/marimuthuhp96" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://linkedin.com/in/mari-muthu-837002219" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+</body>
+</html>

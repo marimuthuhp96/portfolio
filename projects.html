@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mari Muthu Projects — Data Jobs Salary Dashboard, Power BI Portfolio, Groundwater Analytics, GraphRAG Restaurant, SQL Analytics." />
+  <title>Projects | Mari Muthu — Data Analyst Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages/projects.css" />
+</head>
+<body>
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+  <div id="scroll-progress" role="progressbar"></div>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">MV.</a>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html"         class="nav-link">Home</a></li>
+        <li><a href="about.html"         class="nav-link">About</a></li>
+        <li><a href="skills.html"        class="nav-link">Skills</a></li>
+        <li><a href="projects.html"      class="nav-link active">Projects</a></li>
+        <li><a href="experience.html"    class="nav-link">Experience</a></li>
+        <li><a href="analytics-lab.html" class="nav-link">Analytics Lab</a></li>
+        <li><a href="contact.html"       class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta btn btn-primary btn-sm">Hire Me</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div style="padding:calc(var(--sp-32) + 40px) 0 var(--sp-12);">
+    <div class="container" style="text-align:center;">
+      <div class="section-eyebrow" style="justify-content:center;" data-aos="fade-up"><i class="fa-solid fa-folder-open"></i> Portfolio</div>
+      <h1 class="section-title" data-aos="fade-up" data-aos-delay="100">Featured <span class="grad-text">Projects</span></h1>
+      <p class="section-subtitle" style="margin:0 auto;" data-aos="fade-up" data-aos-delay="200">
+        Each project solves a real business problem using data analysis, BI dashboards, ML, or AI. Click any card to see the full case study.
+      </p>
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+  <section class="section-sm" aria-label="Project filters and grid">
+    <div class="container">
+      <div class="project-filters" role="group" aria-label="Filter projects by category" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="Excel">Excel</button>
+        <button class="filter-btn" data-filter="Power BI">Power BI</button>
+        <button class="filter-btn" data-filter="Python + ML">Python & ML</button>
+        <button class="filter-btn" data-filter="AI + NLP">AI & NLP</button>
+        <button class="filter-btn" data-filter="SQL">SQL</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Excel 1 -->
+        <article class="project-card" data-category="Excel" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-image">
+            <img src="assets/images/1_Salary_Dashboard.gif" alt="Data Jobs Salary Dashboard built with Advanced Excel, Power Query, Power Pivot" loading="lazy" />
+            <div class="project-image-overlay"></div>
+            <div class="project-category"><span class="badge badge-purple"><i class="fa-solid fa-table-cells"></i> Excel</span></div>
+            <div class="project-num" aria-hidden="true">01</div>
+          </div>
+          <div class="project-body">
+            <h2 class="project-title">Data Jobs Salary Dashboard</h2>
+            <p class="project-desc">Analyzed global data job salaries using Excel as a full BI platform. Built an interactive dashboard with Power Query, Power Pivot, Pivot Tables, and Pivot Charts to reveal salary trends, in-demand skills, and location insights.</p>
+            <div class="project-tools">
+              <span class="tool-tag">Advanced Excel</span>
+              <span class="tool-tag">Power Query</span>
+              <span class="tool-tag">Power Pivot</span>
+              <span class="tool-tag">Pivot Tables</span>
+              <span class="tool-tag">DAX</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/marimuthuhp96/Excel_Projects" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" aria-label="View Excel project on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+            <button class="btn btn-outline btn-sm" data-project="excel-salary" aria-label="View Excel salary dashboard case study"><i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study</button>
+          </div>
+        </article>
+
+        <!-- Project 2: Power BI 1 -->
+        <article class="project-card" data-category="Power BI" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-image">
+            <img src="assets/images/project1-powerbi.png" alt="Data Jobs Power BI Analytics Dashboard with KPIs and drill-through" loading="lazy" />
+            <div class="project-image-overlay"></div>
+            <div class="project-category"><span class="badge badge-orange"><i class="fa-solid fa-chart-column"></i> Power BI</span></div>
+            <div class="project-num" aria-hidden="true">02</div>
+          </div>
+          <div class="project-body">
+            <h2 class="project-title">Data Jobs Power BI Analytics</h2>
+            <p class="project-desc">Interactive Power BI dashboard featuring executive KPI cards, drill-through analysis, slicers, bookmarks, and business intelligence storytelling with advanced DAX measures.</p>
+            <div class="project-tools">
+              <span class="tool-tag">Power BI</span>
+              <span class="tool-tag">DAX</span>
+              <span class="tool-tag">Power Query</span>
+              <span class="tool-tag">Data Modeling</span>
+              <span class="tool-tag">Drill-through</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/marimuthuhp96/PowerBi_projects" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" aria-label="View Power BI project on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+            <button class="btn btn-outline btn-sm" data-project="powerbi-portfolio" aria-label="View Power BI dashboard case study"><i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study</button>
+          </div>
+        </article>
+
+        <!-- Project 3: Groundwater -->
+        <article class="project-card" data-category="Python + ML" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <img src="assets/images/groundwater-dashboard.png" alt="Groundwater Analytics Platform using Python Streamlit, K-Means, DBSCAN" loading="lazy" />
+            <div class="project-image-overlay"></div>
+            <div class="project-category"><span class="badge badge-green"><i class="fa-brands fa-python"></i> Python + ML</span></div>
+            <div class="project-num" aria-hidden="true">03</div>
+          </div>
+          <div class="project-body">
+            <h2 class="project-title">Groundwater Analytics Platform</h2>
+            <p class="project-desc">End-to-end Python ML platform: EDA, feature engineering, K-Means & DBSCAN clustering to analyze groundwater resources across Indian districts. Built an interactive Streamlit analytics dashboard.</p>
+            <div class="project-tools">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Streamlit</span>
+              <span class="tool-tag">Pandas</span>
+              <span class="tool-tag">Scikit-learn</span>
+              <span class="tool-tag">K-Means</span>
+              <span class="tool-tag">DBSCAN</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/marimuthuhp96/groundwater-rag" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" aria-label="View Groundwater project on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+            <button class="btn btn-outline btn-sm" data-project="groundwater" aria-label="View Groundwater Analytics case study"><i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study</button>
+          </div>
+        </article>
+
+        <!-- Project 4: GraphRAG -->
+        <article class="project-card" data-category="AI + NLP" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-image">
+            <img src="assets/images/graphrag-dashboard.png" alt="GraphRAG Restaurant Analytics System using Neo4j, Gemini API, and NLP" loading="lazy" />
+            <div class="project-image-overlay"></div>
+            <div class="project-category"><span class="badge badge-pink"><i class="fa-solid fa-brain"></i> AI + NLP</span></div>
+            <div class="project-num" aria-hidden="true">04</div>
+          </div>
+          <div class="project-body">
+            <h2 class="project-title">GraphRAG Restaurant Analytics System</h2>
+            <p class="project-desc">AI-powered analytics using Neo4j knowledge graphs, Gemini API, and NLP to extract insights from restaurant reviews: sentiment analysis, entity extraction, and intelligent recommendations.</p>
+            <div class="project-tools">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Neo4j</span>
+              <span class="tool-tag">Gemini API</span>
+              <span class="tool-tag">NLP</span>
+              <span class="tool-tag">Knowledge Graph</span>
+              <span class="tool-tag">Streamlit</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/marimuthuhp96/Neo4jfresh" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" aria-label="View GraphRAG project on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+            <button class="btn btn-outline btn-sm" data-project="graphrag" aria-label="View GraphRAG Restaurant Analytics case study"><i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study</button>
+          </div>
+        </article>
+
+        <!-- Project 5: Excel 2 -->
+        <article class="project-card" data-category="Excel" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-image">
+            <img src="assets/images/Screenshot5.png" alt="Business Performance Analytics Excel Dashboard" loading="lazy" />
+            <div class="project-image-overlay"></div>
+            <div class="project-category"><span class="badge badge-purple"><i class="fa-solid fa-table-cells"></i> Excel</span></div>
+            <div class="project-num" aria-hidden="true">05</div>
+          </div>
+          <div class="project-body">
+            <h2 class="project-title">Business Performance Analytics</h2>
+            <p class="project-desc">Advanced Excel analytics project featuring pivot reporting, automated metrics compilation, conditional formatting, and operational trend analysis for rapid business decision-making.</p>
+            <div class="project-tools">
+              <span class="tool-tag">Advanced Excel</span>
+              <span class="tool-tag">Pivot Tables</span>
+              <span class="tool-tag">Pivot Charts</span>
+              <span class="tool-tag">Conditional Formatting</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/marimuthuhp96/Excel_Projects" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" aria-label="View Excel project on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+            <button class="btn btn-outline btn-sm" data-project="excel-analysis" aria-label="View Business Analytics case study"><i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study</button>
+          </div>
+        </article>
+
+        <!-- Project 6: Power BI 2 -->
+        <article class="project-card" data-category="Power BI" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <img src="assets/images/project2-powerbi.png" alt="Financial & Sales Performance BI Power BI Dashboard" loading="lazy" />
+            <div class="project-image-overlay"></div>
+            <div class="project-category"><span class="badge badge-orange"><i class="fa-solid fa-chart-column"></i> Power BI</span></div>
+            <div class="project-num" aria-hidden="true">06</div>
+          </div>
+          <div class="project-body">
+            <h2 class="project-title">Financial & Sales Performance BI</h2>
+            <p class="project-desc">Multi-page Power BI dashboard for executive revenue tracking, margin analysis, and regional performance monitoring with custom DAX calculations and interactive bookmark navigation.</p>
+            <div class="project-tools">
+              <span class="tool-tag">Power BI</span>
+              <span class="tool-tag">DAX</span>
+              <span class="tool-tag">Data Modeling</span>
+              <span class="tool-tag">Power Query</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/marimuthuhp96/PowerBi_projects" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" aria-label="View Power BI project on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+            <button class="btn btn-outline btn-sm" data-project="powerbi-performance" aria-label="View Performance BI case study"><i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT MODAL -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Project case study details">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close" aria-label="Close project details"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-project-image">
+        <img id="modal-image" src="" alt="Project screenshot" loading="lazy" />
+      </div>
+      <div style="display:flex;align-items:center;gap:var(--sp-3);margin-bottom:var(--sp-5);flex-wrap:wrap;">
+        <span id="modal-category" class="badge badge-blue"></span>
+        <h2 id="modal-title" style="font-size:var(--text-2xl);font-weight:800;letter-spacing:-0.02em;"></h2>
+      </div>
+      <div class="modal-section"><h4><i class="fa-solid fa-triangle-exclamation"></i> Problem Statement</h4><p id="modal-problem"></p></div>
+      <div class="modal-section"><h4><i class="fa-solid fa-database"></i> Dataset</h4><p id="modal-dataset"></p></div>
+      <div class="modal-section"><h4><i class="fa-solid fa-map"></i> Approach</h4><p id="modal-approach"></p></div>
+      <div class="modal-section"><h4><i class="fa-solid fa-lightbulb"></i> Key Insights</h4><p id="modal-insights"></p></div>
+      <div class="modal-section"><h4><i class="fa-solid fa-chart-line"></i> Business Impact</h4><p id="modal-impact"></p></div>
+      <div class="modal-section">
+        <h4><i class="fa-solid fa-wrench"></i> Technologies Used</h4>
+        <div id="modal-tools" style="display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-top:var(--sp-2);"></div>
+      </div>
+      <div style="margin-top:var(--sp-6);">
+        <a id="modal-github" href="https://github.com/marimuthuhp96" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-brands fa-github"></i> View on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">MV.</div>
+        <p class="footer-copy">© 2026 Mari Muthu · Built with passion for data.</p>
+        <div class="footer-links">
+          <a href="https://github.com/marimuthuhp96" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://linkedin.com/in/mari-muthu-837002219" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/projects.js"></script>
+</body>
+</html>

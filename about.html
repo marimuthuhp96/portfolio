@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Mari Muthu — Data Analyst passionate about Business Intelligence, Python, SQL, and Machine Learning. Based in Coimbatore, India." />
+  <title>About | Mari Muthu — Data Analyst</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <style>
+    .about-hero { padding: calc(var(--sp-32) + 40px) 0 var(--sp-20); }
+    .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-5); margin-top:var(--sp-8); }
+    .value-card { background:var(--bg-secondary); border:1px solid var(--border-default); border-radius:var(--r-xl); padding:var(--sp-6); text-align:center; transition:transform var(--ease-base),border-color var(--ease-base); }
+    .value-card:hover { transform:translateY(-4px); border-color:rgba(59,130,246,0.3); }
+    .value-icon { font-size:2rem; margin-bottom:var(--sp-3); }
+    .value-title { font-size:var(--text-base); font-weight:700; margin-bottom:var(--sp-2); }
+    .value-desc { font-size:var(--text-sm); color:var(--text-secondary); line-height:1.65; }
+    .fun-facts { display:grid; grid-template-columns:repeat(2,1fr); gap:var(--sp-4); }
+    .fact-item { display:flex; align-items:center; gap:var(--sp-3); padding:var(--sp-4); background:var(--bg-secondary); border:1px solid var(--border-default); border-radius:var(--r-lg); }
+    @media(max-width:768px){ .values-grid{grid-template-columns:1fr;} .fun-facts{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+  <div id="scroll-progress" role="progressbar"></div>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">MV.</a>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html"         class="nav-link">Home</a></li>
+        <li><a href="about.html"         class="nav-link active">About</a></li>
+        <li><a href="skills.html"        class="nav-link">Skills</a></li>
+        <li><a href="projects.html"      class="nav-link">Projects</a></li>
+        <li><a href="experience.html"    class="nav-link">Experience</a></li>
+        <li><a href="analytics-lab.html" class="nav-link">Analytics Lab</a></li>
+        <li><a href="contact.html"       class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta btn btn-primary btn-sm">Hire Me</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="about-hero" aria-label="About hero">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-16);align-items:center;" class="about-preview-grid">
+        <div data-aos="fade-right">
+          <div class="section-eyebrow"><i class="fa-solid fa-user-tie"></i> About Me</div>
+          <h1 class="section-title">The Story Behind the <span class="grad-text">Data</span></h1>
+          <p style="color:var(--text-secondary);font-size:var(--text-lg);line-height:1.8;margin-bottom:var(--sp-6);">
+            My journey into data analytics began with a curiosity about how data can explain patterns, solve problems, and support better decisions. After completing my <strong>Master of Science in Data Analytics</strong>, I focused on turning that curiosity into practical skills by working on real-world datasets and end-to-end analytics projects.
+          </p>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:var(--sp-6);">
+            Throughout my learning journey, I have built interactive dashboards in <strong>Power BI</strong> and <strong>Excel</strong>, analyzed data using <strong>SQL</strong> and <strong>Python</strong>, and applied data cleaning, exploratory data analysis, visualization, and machine learning techniques to uncover meaningful insights. I enjoy breaking down complex datasets into clear, actionable information that businesses can use with confidence.
+          </p>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:var(--sp-6);">
+            Beyond traditional analytics, I enjoy exploring modern AI technologies. I have worked on projects involving <strong>Retrieval-Augmented Generation (RAG)</strong> and <strong>GraphRAG</strong>, combining data analytics with AI to create intelligent, insight-driven applications. These projects strengthened my ability to bridge data engineering, analytics, and AI into practical solutions.
+          </p>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:var(--sp-8);">
+            Today, I am seeking opportunities as a <strong>Data Analyst</strong>, where I can continue learning, contribute to data-driven decision-making, and build solutions that create measurable business value. Every project I build is another step toward becoming a better analyst and solving real-world problems through data.
+          </p>
+          <div style="display:flex;gap:var(--sp-3);flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
+            <a href="projects.html" class="btn btn-outline"><i class="fa-solid fa-folder-open"></i> View Projects</a>
+          </div>
+        </div>
+        <div data-aos="fade-left">
+          <div class="about-avatar-ring" style="width:320px;height:320px;margin:0 auto;">
+            <div class="about-avatar-outer" aria-hidden="true"></div>
+            <div class="about-avatar-inner" style="width:320px;height:320px;font-size:7rem;">MV</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I DO -->
+  <section class="section-md" style="background:var(--bg-secondary);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--sp-10);" data-aos="fade-up">
+        <div class="section-eyebrow"><i class="fa-solid fa-wand-magic-sparkles"></i> What I Do</div>
+        <h2 class="section-title">My Core <span class="grad-text">Capabilities</span></h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="value-icon">📊</div>
+          <div class="value-title">Business Intelligence</div>
+          <div class="value-desc">Building interactive Power BI dashboards, KPI scorecards, and self-service analytics platforms that empower decision-makers.</div>
+        </div>
+        <div class="value-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="value-icon">🗃️</div>
+          <div class="value-title">Data Engineering & SQL</div>
+          <div class="value-desc">Designing efficient database queries, ETL pipelines, and data transformation workflows using advanced SQL techniques.</div>
+        </div>
+        <div class="value-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="value-icon">🐍</div>
+          <div class="value-title">Python Analytics</div>
+          <div class="value-desc">End-to-end data analysis pipelines using Pandas, statistical modeling, and interactive visualizations with Matplotlib and Seaborn.</div>
+        </div>
+        <div class="value-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="value-icon">🤖</div>
+          <div class="value-title">Machine Learning</div>
+          <div class="value-desc">Applying clustering, classification, and regression models to extract patterns and build predictive analytics solutions.</div>
+        </div>
+        <div class="value-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="value-icon">📗</div>
+          <div class="value-title">Advanced Excel</div>
+          <div class="value-desc">Power Query, Power Pivot, DAX formulas, and dynamic dashboards — transforming Excel into a professional BI tool.</div>
+        </div>
+        <div class="value-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="value-icon">🧠</div>
+          <div class="value-title">AI & NLP</div>
+          <div class="value-desc">Building knowledge graphs, implementing GraphRAG pipelines, and using Gemini AI for intelligent analytics applications.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section-md">
+    <div class="container">
+      <div data-aos="fade-up" style="margin-bottom:var(--sp-10);">
+        <div class="section-eyebrow"><i class="fa-solid fa-graduation-cap"></i> Education</div>
+        <h2 class="section-title">Academic <span class="grad-text">Foundation</span></h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--sp-5);">
+        <div class="glass-card" data-aos="fade-up" data-aos-delay="0">
+          <div style="display:flex;align-items:flex-start;gap:var(--sp-5);">
+            <div style="width:60px;height:60px;border-radius:var(--r-xl);background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:1.75rem;flex-shrink:0;" aria-hidden="true">🎓</div>
+            <div style="flex:1;">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:var(--sp-2);">
+                <div>
+                  <h3 style="font-size:var(--text-xl);font-weight:700;margin-bottom:4px;">Master of Science — Data Analytics</h3>
+                  <p style="color:var(--text-secondary);margin-bottom:var(--sp-3);">Bharathiar University, Coimbatore, Tamil Nadu</p>
+                </div>
+                <span class="badge badge-green"><i class="fa-solid fa-clock"></i> Completing May 2026</span>
+              </div>
+              <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.7;">
+                Advanced coursework in Statistics, Machine Learning, Business Intelligence, Data Visualization,
+                Big Data Analytics, and Research Methods. Focus on applied analytics and real-world problem solving.
+              </p>
+              <div style="display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-top:var(--sp-4);">
+                <span class="badge badge-blue">Statistics</span>
+                <span class="badge badge-green">Machine Learning</span>
+                <span class="badge badge-purple">Business Intelligence</span>
+                <span class="badge badge-orange">Data Visualization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
+          <div style="display:flex;align-items:flex-start;gap:var(--sp-5);">
+            <div style="width:60px;height:60px;border-radius:var(--r-xl);background:rgba(139,92,246,0.15);display:flex;align-items:center;justify-content:center;font-size:1.75rem;flex-shrink:0;" aria-hidden="true">📐</div>
+            <div>
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:var(--sp-2);">
+                <div>
+                  <h3 style="font-size:var(--text-xl);font-weight:700;margin-bottom:4px;">Bachelor of Science — Mathematics</h3>
+                  <p style="color:var(--text-secondary);margin-bottom:var(--sp-3);">Bharathiar University, Coimbatore, Tamil Nadu</p>
+                </div>
+                <span class="badge badge-purple"><i class="fa-solid fa-check"></i> Completed</span>
+              </div>
+              <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.7;">
+                Strong foundation in Pure Mathematics, Linear Algebra, Calculus, Probability Theory, and Mathematical Statistics.
+                This background directly informs my approach to data analysis and ML model understanding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSONAL VALUES -->
+  <section class="section-md" style="background:var(--bg-secondary);border-top:1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);align-items:center;">
+        <div data-aos="fade-right">
+          <div class="section-eyebrow"><i class="fa-solid fa-heart-pulse"></i> My Philosophy</div>
+          <h2 class="section-title">What Drives <span class="grad-text">Me</span></h2>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:var(--sp-6);">
+            I believe that <strong style="color:#fff;">every business decision should be backed by data</strong>. My goal is to be the
+            analyst who bridges the gap between complex data and clear, actionable decisions for business leaders.
+          </p>
+          <div class="fun-facts">
+            <div class="fact-item"><i class="fa-solid fa-chart-simple" style="color:var(--accent-primary);font-size:1.25rem;"></i><span style="font-size:var(--text-sm);font-weight:600;">Data-Driven Thinking</span></div>
+            <div class="fact-item"><i class="fa-solid fa-lightbulb" style="color:var(--accent-warning);font-size:1.25rem;"></i><span style="font-size:var(--text-sm);font-weight:600;">Continuous Learning</span></div>
+            <div class="fact-item"><i class="fa-solid fa-users" style="color:var(--accent-success);font-size:1.25rem;"></i><span style="font-size:var(--text-sm);font-weight:600;">Business Impact Focus</span></div>
+            <div class="fact-item"><i class="fa-solid fa-code" style="color:var(--accent-purple);font-size:1.25rem;"></i><span style="font-size:var(--text-sm);font-weight:600;">Clean Code Practices</span></div>
+          </div>
+        </div>
+        <div data-aos="fade-left">
+          <div style="background:var(--bg-primary);border:1px solid var(--border-default);border-radius:var(--r-2xl);padding:var(--sp-8);">
+            <h3 style="font-size:var(--text-xl);font-weight:700;margin-bottom:var(--sp-6);">Open to Opportunities</h3>
+            <div style="display:flex;flex-direction:column;gap:var(--sp-3);">
+              <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.2);border-radius:var(--r-lg);">
+                <i class="fa-solid fa-check-circle" style="color:var(--accent-primary);"></i>
+                <span style="font-size:var(--text-sm);font-weight:600;">Data Analyst</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.2);border-radius:var(--r-lg);">
+                <i class="fa-solid fa-check-circle" style="color:var(--accent-primary);"></i>
+                <span style="font-size:var(--text-sm);font-weight:600;">Business Intelligence Analyst</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.2);border-radius:var(--r-lg);">
+                <i class="fa-solid fa-check-circle" style="color:var(--accent-primary);"></i>
+                <span style="font-size:var(--text-sm);font-weight:600;">SQL Developer</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.2);border-radius:var(--r-lg);">
+                <i class="fa-solid fa-check-circle" style="color:var(--accent-primary);"></i>
+                <span style="font-size:var(--text-sm);font-weight:600;">Junior Data Scientist</span>
+              </div>
+            </div>
+            <a href="contact.html" class="btn btn-primary w-full" style="width:100%;justify-content:center;margin-top:var(--sp-6);">
+              <i class="fa-solid fa-handshake"></i> Let's Connect
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">MV.</div>
+        <p class="footer-copy">© 2026 Mari Muthu · Built with passion for data.</p>
+        <div class="footer-links">
+          <a href="https://github.com/marimuthuhp96" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://linkedin.com/in/mari-muthu-837002219" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+</body>
+</html>

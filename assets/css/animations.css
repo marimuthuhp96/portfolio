@@ -1,0 +1,392 @@
+/* ============================================================
+   MARIMUTHU V. Portfolio — Animations
+   animations.css | Keyframes, AOS, Particles, Effects
+   ============================================================ */
+
+/* ── Keyframes ────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33%       { transform: translateY(-8px) rotate(2deg); }
+  66%       { transform: translateY(5px) rotate(-1deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(59,130,246,0.4); }
+  50%       { transform: scale(1.05); box-shadow: 0 0 0 8px rgba(59,130,246,0); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(59,130,246,0.3); }
+  50%       { box-shadow: 0 0 50px rgba(59,130,246,0.6), 0 0 100px rgba(59,130,246,0.2); }
+}
+
+@keyframes glowGreen {
+  0%, 100% { box-shadow: 0 0 20px rgba(16,185,129,0.3); }
+  50%       { box-shadow: 0 0 50px rgba(16,185,129,0.6); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes rotateReverse {
+  from { transform: rotate(360deg); }
+  to   { transform: rotate(0deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(100px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes ripple {
+  0%   { transform: scale(0); opacity: 1; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(59,130,246,0.3); }
+  50%       { border-color: rgba(59,130,246,0.8); }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes countUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes particleDrift {
+  0%   { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(-100vh) translateX(50px) rotate(360deg); opacity: 0; }
+}
+
+@keyframes orbitDot {
+  0%   { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+}
+
+@keyframes progressFill {
+  from { width: 0; }
+  to   { width: var(--progress-width, 80%); }
+}
+
+@keyframes circleProgress {
+  from { stroke-dashoffset: 282; }
+  to   { stroke-dashoffset: var(--circle-offset, 56); }
+}
+
+@keyframes heroGlowPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.05); }
+}
+
+@keyframes typeChar {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Utility Animation Classes ────────────────────────────── */
+.anim-float       { animation: float 4s ease-in-out infinite; }
+.anim-float-slow  { animation: floatSlow 6s ease-in-out infinite; }
+.anim-pulse       { animation: pulse 2s ease-in-out infinite; }
+.anim-glow        { animation: glow 3s ease-in-out infinite; }
+.anim-glow-green  { animation: glowGreen 3s ease-in-out infinite; }
+.anim-rotate      { animation: rotate 20s linear infinite; }
+.anim-fade-in     { animation: fadeIn 0.6s ease forwards; }
+.anim-fade-up     { animation: fadeUp 0.6s ease forwards; }
+.anim-scale-in    { animation: scaleIn 0.5s ease forwards; }
+.anim-shimmer {
+  background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.06) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Delay helpers */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+
+/* ── AOS Overrides ────────────────────────────────────────── */
+[data-aos] { pointer-events: none; }
+[data-aos].aos-animate { pointer-events: auto; }
+
+[data-aos="fade-up"] {
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform 0.7s cubic-bezier(0.16,1,0.3,1), opacity 0.7s ease;
+}
+[data-aos="fade-up"].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(40px);
+  opacity: 0;
+  transition: transform 0.7s cubic-bezier(0.16,1,0.3,1), opacity 0.7s ease;
+}
+[data-aos="fade-left"].aos-animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(-40px);
+  opacity: 0;
+  transition: transform 0.7s cubic-bezier(0.16,1,0.3,1), opacity 0.7s ease;
+}
+[data-aos="fade-right"].aos-animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+[data-aos="zoom-in"] {
+  transform: scale(0.88);
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.34,1.56,0.64,1), opacity 0.6s ease;
+}
+[data-aos="zoom-in"].aos-animate {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* ── Particle Canvas ──────────────────────────────────────── */
+#particles-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Typing Cursor ────────────────────────────────────────── */
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: var(--accent-primary);
+  margin-left: 4px;
+  border-radius: 2px;
+  animation: blink 1.1s step-end infinite;
+  vertical-align: text-bottom;
+}
+
+/* ── Gradient Background Orbs ─────────────────────────────── */
+.hero-orb {
+  position: absolute;
+  border-radius: var(--r-full);
+  filter: blur(80px);
+  pointer-events: none;
+  animation: heroGlowPulse 6s ease-in-out infinite;
+}
+
+.hero-orb-1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(59,130,246,0.18) 0%, transparent 70%);
+  top: -200px; left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 0s;
+}
+
+.hero-orb-2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 70%);
+  bottom: 0; right: -100px;
+  animation-delay: 2s;
+}
+
+.hero-orb-3 {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(16,185,129,0.10) 0%, transparent 70%);
+  bottom: 100px; left: -50px;
+  animation-delay: 4s;
+}
+
+/* ── Floating Shapes ──────────────────────────────────────── */
+.floating-shape {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+.floating-shape-1 {
+  width: 60px; height: 60px;
+  border: 1px solid var(--accent-primary);
+  border-radius: var(--r-xl);
+  top: 20%; left: 8%;
+  animation: floatSlow 7s ease-in-out infinite, rotate 20s linear infinite;
+}
+
+.floating-shape-2 {
+  width: 40px; height: 40px;
+  border: 1px solid var(--accent-purple);
+  border-radius: var(--r-full);
+  top: 60%; right: 10%;
+  animation: floatSlow 9s ease-in-out infinite reverse;
+}
+
+.floating-shape-3 {
+  width: 80px; height: 80px;
+  border: 1px solid rgba(16,185,129,0.5);
+  top: 30%; right: 5%;
+  transform: rotate(45deg);
+  animation: floatSlow 11s ease-in-out infinite, rotateReverse 25s linear infinite;
+}
+
+/* ── Glow Ring ─────────────────────────────────────────────── */
+.glow-ring {
+  position: absolute;
+  border-radius: var(--r-full);
+  border: 1px solid rgba(59,130,246,0.2);
+  animation: rotate 20s linear infinite;
+}
+
+/* ── Progress Bar ─────────────────────────────────────────── */
+.progress-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--r-full);
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--grad-primary);
+  border-radius: var(--r-full);
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.16,1,0.3,1);
+  box-shadow: 0 0 12px rgba(59,130,246,0.5);
+  position: relative;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 10px; height: 10px;
+  background: white;
+  border-radius: var(--r-full);
+  box-shadow: 0 0 8px rgba(59,130,246,0.8);
+}
+
+.progress-bar.green { background: var(--grad-success); box-shadow: 0 0 12px rgba(16,185,129,0.5); }
+.progress-bar.green::after { box-shadow: 0 0 8px rgba(16,185,129,0.8); }
+
+/* ── Timeline Connector ───────────────────────────────────── */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--accent-primary) 20%, var(--accent-purple) 80%, transparent);
+  transform: translateX(-50%);
+}
+
+.timeline-dot {
+  width: 14px; height: 14px;
+  background: var(--accent-primary);
+  border-radius: var(--r-full);
+  border: 3px solid var(--bg-primary);
+  box-shadow: 0 0 12px rgba(59,130,246,0.6);
+  animation: pulseDot 2.5s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+/* ── Hover Glow Card ──────────────────────────────────────── */
+.hover-glow {
+  transition: box-shadow var(--ease-base), transform var(--ease-base);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 0 1px rgba(59,130,246,0.3), 0 20px 40px rgba(0,0,0,0.5), var(--glow-blue);
+  transform: translateY(-4px);
+}
+
+/* ── Skeleton Loader ──────────────────────────────────────── */
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--bg-tertiary) 50%, var(--bg-secondary) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--r-md);
+}
+
+/* ── Magnetic Button Effect ───────────────────────────────── */
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+/* ── Page Transition ──────────────────────────────────────── */
+.page-enter {
+  animation: fadeUp 0.5s ease forwards;
+}

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mari Muthu Skills Dashboard — SQL, Python, Power BI, Excel, Machine Learning proficiency with interactive charts and progress indicators." />
+  <title>Skills Dashboard | Mari Muthu — Data Analyst</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages/skills.css" />
+</head>
+<body>
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+  <div id="scroll-progress" role="progressbar"></div>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">MV.</a>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html"         class="nav-link">Home</a></li>
+        <li><a href="about.html"         class="nav-link">About</a></li>
+        <li><a href="skills.html"        class="nav-link active">Skills</a></li>
+        <li><a href="projects.html"      class="nav-link">Projects</a></li>
+        <li><a href="experience.html"    class="nav-link">Experience</a></li>
+        <li><a href="analytics-lab.html" class="nav-link">Analytics Lab</a></li>
+        <li><a href="contact.html"       class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta btn btn-primary btn-sm">Hire Me</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div style="padding:calc(var(--sp-32) + 40px) 0 var(--sp-16); background:var(--bg-primary);" aria-label="Skills page header">
+    <div class="container" style="text-align:center;">
+      <div class="section-eyebrow" style="justify-content:center;" data-aos="fade-up"><i class="fa-solid fa-code"></i> Technical Proficiency</div>
+      <h1 class="section-title" data-aos="fade-up" data-aos-delay="100">Skills <span class="grad-text">Dashboard</span></h1>
+      <p class="section-subtitle" style="margin:0 auto;" data-aos="fade-up" data-aos-delay="200">
+        An analytics view of my technical skills — not just a list, but a data-driven proficiency breakdown.
+      </p>
+    </div>
+  </div>
+
+  <!-- CHARTS SECTION -->
+  <section class="section-md" aria-label="Skills charts">
+    <div class="container">
+      <div class="skills-dashboard">
+        <!-- Radar Chart -->
+        <div class="chart-card" data-aos="fade-right">
+          <div class="chart-card-header">
+            <div>
+              <div class="chart-title">Skills Radar</div>
+              <div class="chart-subtitle">Multi-dimensional skill assessment</div>
+            </div>
+            <span class="badge badge-blue">Overview</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="radar-chart" aria-label="Radar chart showing skill levels across 8 domains" role="img"></canvas>
+          </div>
+        </div>
+        <!-- Bar Chart -->
+        <div class="chart-card" data-aos="fade-left">
+          <div class="chart-card-header">
+            <div>
+              <div class="chart-title">Proficiency by Tool</div>
+              <div class="chart-subtitle">Self-assessed proficiency levels</div>
+            </div>
+            <span class="badge badge-green">Detailed</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="bar-chart" aria-label="Horizontal bar chart of tool proficiency percentages" role="img"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Doughnut + Growth Chart Row -->
+      <div class="skills-dashboard" style="margin-top:var(--sp-6);">
+        <div class="chart-card" data-aos="fade-up">
+          <div class="chart-card-header">
+            <div>
+              <div class="chart-title">Skill Category Mix</div>
+              <div class="chart-subtitle">Distribution of expertise areas</div>
+            </div>
+            <span class="badge badge-purple">Composition</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="doughnut-chart" aria-label="Doughnut chart showing skill category distribution" role="img"></canvas>
+          </div>
+        </div>
+        <div class="chart-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="chart-card-header">
+            <div>
+              <div class="chart-title">Learning Journey</div>
+              <div class="chart-subtitle">Skill growth over time (2022–2026)</div>
+            </div>
+            <span class="badge badge-orange">Trend</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="timeline-chart" aria-label="Line chart showing skill growth over time" role="img"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRESS BARS -->
+  <section class="section-md" style="background:var(--bg-secondary);border-top:1px solid var(--border-subtle);" aria-label="Skill progress bars">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--sp-10);" data-aos="fade-up">
+        <div class="section-eyebrow"><i class="fa-solid fa-bars-progress"></i> Detailed Breakdown</div>
+        <h2 class="section-title">Skill <span class="grad-text">Proficiency</span></h2>
+      </div>
+      <div class="skills-progress-grid">
+        <!-- Column 1: Data Tools -->
+        <div class="skills-progress-column" data-aos="fade-right">
+          <div class="skills-col-title"><i class="fa-solid fa-table-cells" style="color:var(--accent-primary);"></i> Data & Analytics Tools</div>
+
+          <div class="skill-row">
+            <div class="skill-row-header">
+              <span class="skill-name"><i class="fa-solid fa-table-cells" style="color:#34D399;"></i> Advanced Excel</span>
+              <span class="skill-pct">92%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar green" data-width="92%"></div></div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-header">
+              <span class="skill-name"><i class="fa-solid fa-database" style="color:#60A5FA;"></i> SQL</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar" data-width="90%"></div></div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-header">
+              <span class="skill-name"><i class="fa-solid fa-filter" style="color:#60A5FA;"></i> Power Query</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar" data-width="85%"></div></div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-header">
+              <span class="skill-name"><i class="fa-solid fa-chart-column" style="color:#FBBF24;"></i> Power BI</span>
+              <span class="skill-pct">88%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar" data-width="88%" style="background:linear-gradient(90deg,#F59E0B,#FBBF24);"></div></div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-header">
+              <span class="skill-name"><i class="fa-solid fa-bolt" style="color:#A78BFA;"></i> DAX</span>
+              <span class="skill-pct">78%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar" data-width="78%" style="background:linear-gradient(90deg,#8B5CF6,#A78BFA);"></div></div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-header">
+              <span class="skill-name"><i class="fa-solid fa-chart-pie" style="color:#34D399;"></i> Data Visualization</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar green" data-width="85%"></div></div>
+          </div>
+        </div>
+
+        <!-- Column 2: Programming & ML -->
+        <div class="skills-progress-column" data-aos="fade-left">
+          <div class="skills-col-title"><i class="fa-brands fa-python" style="color:var(--accent-success);"></i> Programming & Machine Learning</div>
+
+          <div class="skill-row">
+            <div class="skill-row-header">
+              <span class="skill-name"><i class="fa-brands fa-python" style="color:#34D399;"></i> Python</span>
+              <span class="skill-pct">82%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar green" data-width="82%"></div></div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-header">
+              <span class="skill-name"><i class="fa-solid fa-robot" style="color:#F472B6;"></i> Machine Learning</span>
+              <span class="skill-pct">72%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar" data-width="72%" style="background:linear-gradient(90deg,#EC4899,#F472B6);"></div></div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-header">
+              <span class="skill-name"><i class="fa-solid fa-calculator" style="color:#60A5FA;"></i> Statistics</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar" data-width="80%"></div></div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-header">
+              <span class="skill-name"><i class="fa-solid fa-broom" style="color:#34D399;"></i> Data Cleaning</span>
+              <span class="skill-pct">88%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar green" data-width="88%"></div></div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-header">
+              <span class="skill-name"><i class="fa-brands fa-git-alt" style="color:#FBBF24;"></i> Git & GitHub</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar" data-width="75%" style="background:linear-gradient(90deg,#F59E0B,#FBBF24);"></div></div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-header">
+              <span class="skill-name"><i class="fa-solid fa-network-wired" style="color:#A78BFA;"></i> Neo4j / Graph DB</span>
+              <span class="skill-pct">65%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar" data-width="65%" style="background:linear-gradient(90deg,#8B5CF6,#A78BFA);"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILL RINGS -->
+  <section class="section-md" aria-label="Circular skill indicators">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--sp-10);" data-aos="fade-up">
+        <div class="section-eyebrow"><i class="fa-solid fa-circle-notch"></i> Core Expertise</div>
+        <h2 class="section-title">Primary <span class="grad-text">Skills</span></h2>
+      </div>
+      <div class="skill-rings-section" data-aos="zoom-in">
+        <div class="skill-rings-grid">
+          <div class="skill-ring-wrap">
+            <svg width="100" height="100" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="skill-ring-track" cx="50" cy="50" r="40"/>
+              <circle class="skill-ring-fill blue" cx="50" cy="50" r="40" data-pct="90"/>
+            </svg>
+            <div class="skill-ring-label">
+              <span class="skill-ring-pct" style="color:var(--accent-primary);">90%</span>
+              <span class="skill-ring-name">SQL</span>
+            </div>
+          </div>
+          <div class="skill-ring-wrap">
+            <svg width="100" height="100" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="skill-ring-track" cx="50" cy="50" r="40"/>
+              <circle class="skill-ring-fill green" cx="50" cy="50" r="40" data-pct="92"/>
+            </svg>
+            <div class="skill-ring-label">
+              <span class="skill-ring-pct" style="color:var(--accent-success);">92%</span>
+              <span class="skill-ring-name">Excel</span>
+            </div>
+          </div>
+          <div class="skill-ring-wrap">
+            <svg width="100" height="100" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="skill-ring-track" cx="50" cy="50" r="40"/>
+              <circle class="skill-ring-fill orange" cx="50" cy="50" r="40" data-pct="88"/>
+            </svg>
+            <div class="skill-ring-label">
+              <span class="skill-ring-pct" style="color:var(--accent-warning);">88%</span>
+              <span class="skill-ring-name">Power BI</span>
+            </div>
+          </div>
+          <div class="skill-ring-wrap">
+            <svg width="100" height="100" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="skill-ring-track" cx="50" cy="50" r="40"/>
+              <circle class="skill-ring-fill green" cx="50" cy="50" r="40" data-pct="82"/>
+            </svg>
+            <div class="skill-ring-label">
+              <span class="skill-ring-pct" style="color:var(--accent-success);">82%</span>
+              <span class="skill-ring-name">Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS GRID -->
+  <section class="section-md" style="background:var(--bg-secondary);border-top:1px solid var(--border-subtle);" aria-label="Tools and technologies grid">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--sp-10);" data-aos="fade-up">
+        <div class="section-eyebrow"><i class="fa-solid fa-toolbox"></i> Technology Stack</div>
+        <h2 class="section-title">Tools I <span class="grad-text">Work With</span></h2>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="tool-icon">🗃️</div>
+          <div class="tool-name">SQL</div>
+          <div class="tool-level" style="color:var(--accent-primary);">Expert</div>
+        </div>
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="50">
+          <div class="tool-icon">🐍</div>
+          <div class="tool-name">Python</div>
+          <div class="tool-level" style="color:var(--accent-success);">Advanced</div>
+        </div>
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="tool-icon">📊</div>
+          <div class="tool-name">Power BI</div>
+          <div class="tool-level" style="color:var(--accent-warning);">Advanced</div>
+        </div>
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="150">
+          <div class="tool-icon">📗</div>
+          <div class="tool-name">Advanced Excel</div>
+          <div class="tool-level" style="color:var(--accent-success);">Expert</div>
+        </div>
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="tool-icon">⚡</div>
+          <div class="tool-name">DAX</div>
+          <div class="tool-level" style="color:var(--accent-purple);">Proficient</div>
+        </div>
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="tool-icon">🔄</div>
+          <div class="tool-name">Power Query</div>
+          <div class="tool-level" style="color:var(--accent-primary);">Advanced</div>
+        </div>
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="50">
+          <div class="tool-icon">🤖</div>
+          <div class="tool-name">Machine Learning</div>
+          <div class="tool-level" style="color:var(--accent-pink);">Proficient</div>
+        </div>
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="tool-icon">🐼</div>
+          <div class="tool-name">Pandas</div>
+          <div class="tool-level" style="color:var(--accent-success);">Advanced</div>
+        </div>
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="150">
+          <div class="tool-icon">📈</div>
+          <div class="tool-name">Matplotlib</div>
+          <div class="tool-level" style="color:var(--accent-primary);">Proficient</div>
+        </div>
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="tool-icon">🔬</div>
+          <div class="tool-name">Scikit-learn</div>
+          <div class="tool-level" style="color:var(--accent-pink);">Proficient</div>
+        </div>
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="tool-icon">🕸️</div>
+          <div class="tool-name">Neo4j</div>
+          <div class="tool-level" style="color:var(--accent-purple);">Intermediate</div>
+        </div>
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="50">
+          <div class="tool-icon">🐙</div>
+          <div class="tool-name">Git & GitHub</div>
+          <div class="tool-level" style="color:var(--accent-warning);">Proficient</div>
+        </div>
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="tool-icon">💻</div>
+          <div class="tool-name">VS Code</div>
+          <div class="tool-level" style="color:var(--accent-primary);">Daily Use</div>
+        </div>
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="150">
+          <div class="tool-icon">📓</div>
+          <div class="tool-name">Jupyter</div>
+          <div class="tool-level" style="color:var(--accent-warning);">Daily Use</div>
+        </div>
+        <div class="tool-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="tool-icon">🧮</div>
+          <div class="tool-name">Statistics</div>
+          <div class="tool-level" style="color:var(--accent-success);">Strong</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">MV.</div>
+        <p class="footer-copy">© 2026 Mari Muthu · Built with passion for data.</p>
+        <div class="footer-links">
+          <a href="https://github.com/marimuthuhp96" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://linkedin.com/in/mari-muthu-837002219" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/charts.js"></script>
+</body>
+</html>

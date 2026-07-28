@@ -1,0 +1,230 @@
+/* ============================================================
+   Analytics Lab Page Styles
+   ============================================================ */
+
+/* ── Lab Hero ─────────────────────────────────────────────── */
+.lab-hero {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--r-3xl);
+  padding: var(--sp-12) var(--sp-8);
+  text-align: center;
+  margin-bottom: var(--sp-12);
+  position: relative;
+  overflow: hidden;
+}
+
+.lab-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.lab-hero-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--sp-4);
+}
+
+.lab-hero-sub {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  max-width: 550px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Lab Categories Grid ──────────────────────────────────── */
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-5);
+  margin-bottom: var(--sp-12);
+}
+
+.lab-category-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--r-2xl);
+  overflow: hidden;
+  transition: transform var(--ease-base), border-color var(--ease-base), box-shadow var(--ease-base);
+}
+
+.lab-category-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59,130,246,0.25);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.lab-category-header {
+  padding: var(--sp-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.lab-category-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+}
+
+.lab-category-header.python::before  { background: #3B82F6; }
+.lab-category-header.sql::before     { background: #10B981; }
+.lab-category-header.powerbi::before { background: #F59E0B; }
+.lab-category-header.excel::before   { background: #8B5CF6; }
+.lab-category-header.ml::before      { background: #EC4899; }
+.lab-category-header.viz::before     { background: #06B6D4; }
+
+.lab-cat-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--sp-3);
+}
+
+.lab-cat-title {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  margin-bottom: var(--sp-2);
+}
+
+.lab-cat-count {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.lab-category-body {
+  padding: var(--sp-5) var(--sp-6);
+}
+
+.lab-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: color var(--ease-fast);
+}
+
+.lab-item:last-child { border-bottom: none; }
+
+.lab-item:hover { color: var(--accent-primary); }
+
+.lab-item-dot {
+  width: 6px; height: 6px;
+  border-radius: var(--r-full);
+  flex-shrink: 0;
+}
+
+.lab-item-name {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  flex: 1;
+}
+
+.lab-item-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--r-full);
+}
+
+/* ── Code Terminal Preview ────────────────────────────────── */
+.code-terminal {
+  background: #0D1117;
+  border: 1px solid var(--border-default);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  margin-bottom: var(--sp-8);
+}
+
+.terminal-header {
+  background: var(--bg-elevated);
+  padding: var(--sp-3) var(--sp-5);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-dot {
+  width: 12px; height: 12px;
+  border-radius: var(--r-full);
+}
+
+.terminal-dot.red    { background: #FF5F57; }
+.terminal-dot.yellow { background: #FFBD2E; }
+.terminal-dot.green  { background: #28CA41; }
+
+.terminal-title {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.terminal-body {
+  padding: var(--sp-6);
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #E6EDF3;
+  overflow-x: auto;
+}
+
+.code-keyword  { color: #FF7B72; }
+.code-string   { color: #A5D6FF; }
+.code-comment  { color: #8B949E; font-style: italic; }
+.code-func     { color: #D2A8FF; }
+.code-num      { color: #79C0FF; }
+.code-var      { color: #FFA657; }
+
+/* ── Viz Gallery ──────────────────────────────────────────── */
+.viz-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+}
+
+.viz-item {
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4/3;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  cursor: pointer;
+}
+
+.viz-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--ease-base);
+}
+
+.viz-item:hover .viz-item-overlay { opacity: 1; }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .lab-grid { grid-template-columns: repeat(2, 1fr); }
+  .viz-gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .lab-grid { grid-template-columns: 1fr; }
+  .viz-gallery { grid-template-columns: 1fr; }
+}
